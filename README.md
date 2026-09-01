@@ -8,6 +8,11 @@
   <img src="assets/github/banner.png?raw=true" />
 </p>
 
+# WARNING ⚠️
+
+This repository was originally created by [Xifil](https://github.com/xifil), all development credits go to them.
+T9-Mod was originally an open-source effort, however was deleted on short notice. IW8-Mod remains updated on our discord, found [here](https://discord.gg/WVSErUvBbj).
+
 NOTE: You must legally own [Call of Duty®: Black Ops Cold War](https://store.steampowered.com/app/1985810/) to run this mod. Cracked/Pirated versions of the game are **NOT** supported.
 
 ## Compile from source
