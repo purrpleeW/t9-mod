@@ -1,0 +1,38 @@
+name: Build and Publish Project
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        submodules: true
+
+    - name: Add MSBuild to PATH
+      uses: microsoft/setup-msbuild@v1.0.2
+
+    - name: Fetch Submodules Recursively
+      run: git submodule update --init --recursive
+
+    - name: Generate project
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      run: .\generate.bat
+
+    - name: Build t9-mod
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      run: msbuild /m /p:Configuration=Release .
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: t9-mod
+        path: build/t9_vs2022/x64/client/discord_game_sdk.dll
