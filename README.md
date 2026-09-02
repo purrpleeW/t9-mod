@@ -18,15 +18,12 @@ NOTE: You must legally own [Call of Duty®: Black Ops Cold War](https://store.st
 ## Compile from source
 
 - Clone the Git repo. Do NOT download it as ZIP, that won't work.
-  > You can run
+  > You can run:
   > ```
-  > git clone https://github.com/xifil/t9-mod.git --recurse-submodules
+  > git clone https://github.com/purrpleeW/t9-mod.git --recurse-submodules
   > ```
-  > or
-  > ```
-  > git clone https://gitlab.com/xifil/t9-mod.git --recurse-submodules
-  > ```
-  > depending on what Git you would like to use, however you always need the `--recurse-submodules` flag.
+
+- You always need the `--recurse-submodules` flag.
 - Update the submodules and run `premake5 vs2022` or simply use the delivered `generate.bat`.
 - Build via solution file in `t9_vs2022.sln`.
 
